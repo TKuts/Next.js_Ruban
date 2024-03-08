@@ -1,5 +1,5 @@
 import { getAllArticles } from "./(server)/api";
-import { ROUTIN } from "./routing";
+import { ROUTING } from "./routing";
 import { AppLink } from "./shared/components/app-link";
 const ARTICLES_PER_PAGE = 10;
 
@@ -19,7 +19,7 @@ export default async function Home({ searchParams }: { searchParams: Record<stri
 				{
 					articles.map(article => (
 						<li key={article.name}>
-							<AppLink href={ROUTIN.article(article.name)}>{article.header}</AppLink>
+							<AppLink href={ROUTING.article(article.name)}>{article.header}</AppLink>
 						</li>
 					))
 				}

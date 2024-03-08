@@ -1,3 +1,3 @@
-export const ROUTIN ={
-	article: (articleName : string) => `/article/${articleName}`
+export const ROUTING ={
+	article: (articleName : string) => `/articles/${articleName}`
 }

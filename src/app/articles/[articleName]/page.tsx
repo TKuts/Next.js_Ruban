@@ -1,6 +1,13 @@
-export default function ArticlePage({ params }: Params) {
+import { getArticleByName } from "@/app/(server)/api"
+
+export default async function ArticlePage({ params }: Params) {
 
 	const { articleName } = params
-
-	return <>This is Arcicle {articleName}</>
+	const article = await getArticleByName(articleName)
+	return <>
+		<h1>{articleName}</h1>
+		{article.text.map((line, i) => (
+			<p key={i}>{line}</p>
+		))}
+	</>
 }
