@@ -4,7 +4,8 @@ import { delayed } from './delay';
 
 export function getAllArticles() {
   return delayed(
-    articles
+    articles,
+    { timeout: 0 }
     //	{ timeout: 1500} // make timeout in render
   );
 }
